@@ -5,7 +5,6 @@ import City from "./City";
 import Degree from "./Degree";
 import Preds from "./Preds";
 import Describe from "./Describe";
-import Coder from "./Coder";
 import Forecast from "./Forecast";
 
 export default function Weather() {

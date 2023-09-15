@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        <footer>
+        <footer className="coder">
           created by Mojdeh Khorsand Moghadam, open-sourced on{" "}
           <a
             href="https://github.com/realRJ10/react-weather-app"
