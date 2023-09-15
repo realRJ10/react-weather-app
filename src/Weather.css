@@ -1,13 +1,13 @@
 .Weather {
-  margin-top: 30px;
+  margin: 30px auto 0;
   padding-top: 20px;
   padding-right: 20px;
+  padding-left: 30px;
   background: rgba(166, 155, 245, 0.516);
   border: 2px solid #4c3381;
-  border-radius: 5px;
-  padding-left: 30px;
   border-radius: 10px;
   max-width: 700px;
+  display: block;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -15,20 +15,30 @@ ul {
   list-style: none;
 }
 h1 {
-  color: #939aa9;
+  color: #7666b0;
   font-size: 50px;
 }
 h2 {
-  color: #5a6275;
+  color: #34285edd;
   font-size: 50px;
 }
 h3 {
   font-size: 20px;
+  color: #473f5f;
 }
 h4,
 h5 {
   font-size: 15px;
   padding-top: 10px;
+  color: #2c3f5f;
+}
+.btn {
+  background: #7666b0;
+  color: #d1cbfa;
+}
+.btn:hover {
+  background: #30154530;
+  color: #34285edd;
 }
 
 #forecast {

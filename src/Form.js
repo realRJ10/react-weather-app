@@ -15,20 +15,10 @@ export default function Form() {
           </div>
         </div>
         <div class="col-2">
-          <input
-            type="submit"
-            value="Search"
-            id="button"
-            class="btn btn-primary"
-          />
+          <input type="submit" value="Search" id="button" class="btn" />
         </div>
         <div class="col-2">
-          <input
-            type="button"
-            value="current"
-            id="current"
-            class="btn btn-warning"
-          />
+          <input type="button" value="Current" id="current" class="btn" />
         </div>
       </div>
     </form>
