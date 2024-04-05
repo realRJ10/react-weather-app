@@ -11,6 +11,7 @@ export default function Form() {
               className="form-control"
               placeholder="Type the city"
               id="input"
+              autoFocus="on"
             />
           </div>
         </div>
