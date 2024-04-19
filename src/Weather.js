@@ -4,9 +4,9 @@ import "./Weather.css";
 import Form from "./Form";
 import City from "./City";
 import Degree from "./Degree";
-import Preds from "./Preds";
 import Describe from "./Describe";
 import Forecast from "./Forecast";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -19,7 +19,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       feel: response.data.main.feels_like,
       description: response.data.weather[0].description,
-      date: "Sunday 17:22",
+      date: new Date(response.data.dt * 1000),
     });
   }
   if (weatherData.ready) {
@@ -34,12 +34,29 @@ export default function Weather(props) {
               <Describe Weather={weatherData.description} />
             </div>
             <div className="col-6">
-              <Preds
-                Humidity={weatherData.humidity}
-                Wind={Math.round(weatherData.wind)}
-                Date={weatherData.date}
-                Feels={weatherData.feel}
-              />
+              <ul>
+                <li>
+                  <h3 id="time">
+                    <FormattedDate date={weatherData.date} />
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    Humidity: <span id="humidity">{weatherData.humidity} </span>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    Wind speed:{" "}
+                    <span id="speed">{Math.round(weatherData.wind)}</span>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    Feels like: <span id="feel"> {weatherData.feel}</span>
+                  </h3>
+                </li>
+              </ul>
             </div>
           </div>
           <Forecast />
